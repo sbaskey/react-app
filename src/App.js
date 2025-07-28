@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import photo11 from "./photo11.jpg";
 import OnlineServices from "./OnlineServices.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLayerGroup } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
@@ -17,8 +19,12 @@ function App() {
 
           <div className="icon-text-container">
             <div className="icon-text-box">
-              <img src="/images/icon1.png" alt="Icon 1" className="icon-image" />
-              <span className="icon-text">First Item</span>
+              <FontAwesomeIcon icon={faLayerGroup}  style={{ 
+        color: 'red', 
+        fontSize: '2em', 
+        marginRight: '10px' 
+      }} />
+              <span className="icon-text">Land Records Services</span>
             </div>
             <div className="icon-text-box">
               <img src="/images/icon2.png" alt="Icon 2" className="icon-image" />
