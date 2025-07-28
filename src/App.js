@@ -4,46 +4,33 @@ import photo11 from "./photo11.jpg";
 import OnlineServices from "./OnlineServices.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLayerGroup } from '@fortawesome/free-solid-svg-icons';
-
+import cicd from "./cicd.jpg"
 function App() {
   return (
-    <div className="app-container">
-      <header className="header">
-        <img src={OnlineServices} alt="Logo" className="header-logo" />
-        {/* <span className="header-title">Fixed Header</span> */}
-      </header>
+    <>
+    <div className="nav">
+      <h2>Logo</h2>
+      <div class="nav-part2">
+        <h4>Store</h4>
+        <h4>Course</h4>
+        <h4>Blog</h4>
+        <h4>Contact</h4>
+        <i class="ri-menu-line"></i>
 
-      <main className="main-content">
-        <div className="content-wrapper">
-          <img src={photo11} alt="Slide" className="plain-slide-image fall-animation image-fade-in" />
-
-          <div className="icon-text-container">
-            <div className="icon-text-box">
-              <FontAwesomeIcon icon={faLayerGroup}  style={{ 
-        color: 'red', 
-        fontSize: '2em', 
-        marginRight: '10px' 
-      }} />
-              <span className="icon-text">Land Records Services</span>
-            </div>
-            <div className="icon-text-box">
-              <img src="/images/icon2.png" alt="Icon 2" className="icon-image" />
-              <span className="icon-text">Second Item</span>
-            </div>
-            <div className="icon-text-box">
-              <img src="/images/icon3.png" alt="Icon 3" className="icon-image" />
-              <span className="icon-text">Third Item</span>
-            </div>
-            <div className="icon-text-box">
-              <img src="/images/icon4.png" alt="Icon 4" className="icon-image" />
-              <span className="icon-text">Fourth Item</span>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <footer className="footer">Designed by @National Informatics Center</footer>
+      </div>
+      
     </div>
+    <div className="content">
+      <div class="left">
+        <h1>Learn from <span>National Informatics Center</span>,Boudh.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi totam molestiae placeat voluptatibus dignissimos minus ipsum nam eaque iure neque provident accusantium illo ipsam sapiente nemo, cupiditate culpa at fugiat.</p>
+        <button>Explore Now</button>
+      </div>
+      <div className="right">
+         <img src={cicd} alt="cicd" className="cicd-image" />
+      </div>
+    </div>
+    </>
   );
 }
 
