@@ -1,59 +1,47 @@
 import React from "react";
+import Slide from "./components/Slide/Slide";
+import LandRecordsTable from "./LandRecordsTable/LandRecordsTable";
 import "./App.css";
 import photo11 from "./photo11.jpg";
 import OnlineServices from "./OnlineServices.png";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLayerGroup,faIdCard,faUserPlus,faCogs} from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
-    // <div className="app-container">
-    //   <header className="header">
-    //     <img src={OnlineServices} alt="Logo" className="header-logo" />
-    //     {/* <span className="header-title">Fixed Header</span> */}
-    //   </header>
-
-    //   <main className="main-content">
-    //     <div className="content-wrapper">
-    //       <img src={photo11} alt="Slide" className="plain-slide-image fall-animation image-fade-in" />
-
-    //       <div className="icon-text-container">
-    //         <div className="icon-text-box">
-    //           <FontAwesomeIcon icon={faLayerGroup}  style={{ 
-    //     color: 'red', 
-    //     fontSize: '2em', 
-    //     marginRight: '10px' 
-    //   }} />
-    //           <span className="icon-text">Land Records Services</span>
-    //         </div>
-    //         <div className="icon-text-box">
-    //           <img src="/images/icon2.png" alt="Icon 2" className="icon-image" />
-    //           <span className="icon-text">Second Item</span>
-    //         </div>
-    //         <div className="icon-text-box">
-    //           <img src="/images/icon3.png" alt="Icon 3" className="icon-image" />
-    //           <span className="icon-text">Third Item</span>
-    //         </div>
-    //         <div className="icon-text-box">
-    //           <img src="/images/icon4.png" alt="Icon 4" className="icon-image" />
-    //           <span className="icon-text">Fourth Item</span>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </main>
-
-    //   <footer className="footer">Designed by @National Informatics Center</footer>
-    // </div>
     <>
-    <div className="nav">
-      <img src={OnlineServices} alt="Logo" className="header-logo" />
-    </div>
-    <div className="content">
-      <div className="slide-image">
-        <img src={photo11} alt="Logo" className="slide-image1" />
+      <div className="nav">
+        <img src={OnlineServices} alt="Logo" className="header-logo" />
       </div>
-      {/* <div className="features">Hi</div> */}
-    </div>
-    <div className="footer">Designed by @National Informatics Centre</div>
+
+      <div className="content">
+       <LandRecordsTable/>
+        <div className="features">
+          <div className="styled-card">
+            <FontAwesomeIcon icon={faLayerGroup} style={{ color: 'red', fontSize: '3vw'}}/>
+            <span className="icon-text">Land Record Services</span>
+          </div>
+
+          <div className="styled-card">
+            <FontAwesomeIcon icon={faIdCard} style={{ color: 'lightgreen', fontSize: '3vw'}} />
+            <span className="icon-text">Certificate Services</span>
+          </div>
+
+          <div className="styled-card">
+            <FontAwesomeIcon icon={faUserPlus} style={{ color: 'lightblue', fontSize: '3vw'}}/>
+            <span className="icon-text">Registration Services</span>
+          </div>
+
+          <div className="styled-card" onClick={() => window.location.href = 'https://edistrict.odisha.gov.in/'}
+  style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <FontAwesomeIcon icon={faCogs} style={{ color: 'lightpink', fontSize: '3vw'}}/>
+
+            <span className="icon-text">Other Services</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="footer">Designed by @National Informatics Centre</div>
     </>
   );
 }

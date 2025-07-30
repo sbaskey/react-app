@@ -40,15 +40,37 @@ body, html, #root {
   padding: 2vh 2vw;
 }
 .slide-image1 {
-  object-fit: contain;  
+   object-fit: contain; 
+   height: 45vh;
   display: block;
   max-width: 80%;
   width: 100%;
 }
 
 .features{
-  background-color: red;
+  background-color: rgb(0, 17, 255);
   width: 100%;
+  display: flex;
+  padding: 0 2vw;
+  align-content: center;
+  justify-content: center;
+  gap: 2vw;
+  padding:1vw 4vw;
+}
+
+.styled-card{
+  width: 25vw;
+  height: 12.2vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 2vw;
+  border-radius: 6px;
+  padding: 0 .8vw;
+  font-weight: 700;
+  font-size: 1.2vw;
+  /* justify-content: center; */
 }
 
 
@@ -62,3 +84,4 @@ body, html, #root {
   justify-content: left;
   padding-left: 2vw;
 }
+
