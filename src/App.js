@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Slide from "./components/Slide/Slide";
 import LandRecordsTable from "./LandRecordsTable/LandRecordsTable";
 import "./App.css";
@@ -8,6 +8,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLayerGroup,faIdCard,faUserPlus,faCogs} from '@fortawesome/free-solid-svg-icons';
 
 function App() {
+   const componentMap = {
+    A: <Slide src={photo11}/>,
+    B: <LandRecordsTable />,
+  };
+  const [activeComponent, setActiveComponent] = useState('A');
+
+
   return (
     <>
       <div className="nav">
@@ -15,9 +22,10 @@ function App() {
       </div>
 
       <div className="content">
-       <LandRecordsTable/>
+       {componentMap[activeComponent]}
         <div className="features">
-          <div className="styled-card">
+          <div className="styled-card" onClick={() => setActiveComponent('B')} 
+  style={{ cursor: 'pointer' }}>
             <FontAwesomeIcon icon={faLayerGroup} style={{ color: 'red', fontSize: '3vw'}}/>
             <span className="icon-text">Land Record Services</span>
           </div>
